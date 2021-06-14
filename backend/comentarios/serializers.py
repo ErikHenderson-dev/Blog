@@ -3,5 +3,5 @@ from . import models
 
 class ComentariosSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Comentarios
+        model = models.Comentario
         fields = '__all__'

@@ -5,4 +5,4 @@ from . import models
 
 class CategoriasViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.CategoriasSerializer
-    queryset = models.Categorias.objects.all()
+    queryset = models.Categoria.objects.all()

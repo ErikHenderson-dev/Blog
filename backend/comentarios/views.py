@@ -5,4 +5,4 @@ from . import models
 
 class ComentariosViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.ComentariosSerializer
-    queryset = models.Comentarios.objects.all()
+    queryset = models.Comentario.objects.all()

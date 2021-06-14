@@ -5,4 +5,4 @@ from . import models
 
 class PostsViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.PostsSerializer
-    queryset = models.Posts.objects.all()
+    queryset = models.Post.objects.all()

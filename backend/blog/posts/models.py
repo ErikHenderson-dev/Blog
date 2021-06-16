@@ -1,5 +1,5 @@
 from django.db import models
-from categorias.models import Categoria
+from blog.categorias.models import Categoria
 from django.contrib.auth.models import User
 from django.utils import timezone
 # Create your models here.

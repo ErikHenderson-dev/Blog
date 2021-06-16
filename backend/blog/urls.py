@@ -5,9 +5,9 @@ from rest_framework import routers
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-from posts import views as postsview
-from categorias import views as categoriasview
-from comentarios import views as comentariosview
+from blog.posts import views as postsview
+from blog.categorias import views as categoriasview
+from blog.comentarios import views as comentariosview
 
 schema_view = get_schema_view(
    openapi.Info(

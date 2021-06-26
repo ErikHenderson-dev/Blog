@@ -2,10 +2,8 @@ import os
 from pathlib import Path
 from decouple import config
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -16,9 +14,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -81,7 +77,6 @@ DATABASES = {
     }   
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -100,7 +95,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -114,15 +108,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = config('STATIC_URL')
-STATICFILES = config('STATICFILES')
+STATIC_URL= '/static_root/'
+STATICFILES= os.path.join(BASE_DIR, 'static_root')
 
-MEDIA_URL = config('MEDIA_URL')
-MEDIA_ROOT = config('MEDIA_ROOT')
+MEDIA_URL = '/media_root/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media_root')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
